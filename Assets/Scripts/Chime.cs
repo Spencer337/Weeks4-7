@@ -11,6 +11,7 @@ public class Chime : MonoBehaviour
     public float n;
     public int v;
     public SpriteRenderer sr;
+    public int hour = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,17 +27,23 @@ public class Chime : MonoBehaviour
         v = (int)n;
         if (v == 0)
         {
-            if (audioSource.isPlaying == false)
-            {
-                
-                
+            for (int i = 0; i <= hour; i++) {
+                if (audioSource.isPlaying == false)
+                {
+                    audioSource.PlayOneShot(clip);
+
+                }
             }
-            if (audioSource.isPlaying == true)
+            hour++;
+            if (hour > 12)
             {
-                audioSource.PlayOneShot(clip);
-                sr.enabled = true;
+                hour = 0;
             }
-            
+
+        }
+        if (audioSource.isPlaying == true)
+        {
+            sr.enabled = true;
         }
     }
 }

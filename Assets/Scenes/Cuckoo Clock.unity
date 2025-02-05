@@ -352,32 +352,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1790882290}
   - component: {fileID: 1790882289}
-  - component: {fileID: 1790882288}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1790882288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790882287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397d0eb25d6e397428541e6ee471eff9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rot: {x: 0, y: 0, z: 0}
-  audioSource: {fileID: 483078818}
-  clip: {fileID: 8300000, guid: 4fd926af1e936314c9de00ec09b1bb7e, type: 3}
-  n: 0
-  v: 0
-  sr: {fileID: 1790882289}
 --- !u!212 &1790882289
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -539,6 +520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900793738}
   - component: {fileID: 1900793739}
+  - component: {fileID: 1900793740}
   m_Layer: 0
   m_Name: CentreofHourRotation
   m_TagString: Untagged
@@ -574,7 +556,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e490a51c5da35e144939212e8509f234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.03
+--- !u!114 &1900793740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900793737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397d0eb25d6e397428541e6ee471eff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rot: {x: 0, y: 0, z: 0}
+  audioSource: {fileID: 483078818}
+  clip: {fileID: 8300000, guid: 4fd926af1e936314c9de00ec09b1bb7e, type: 3}
+  n: 0
+  v: 0
+  sr: {fileID: 1790882289}
 --- !u!1 &2124150507
 GameObject:
   m_ObjectHideFlags: 0

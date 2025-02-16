@@ -26,10 +26,14 @@ public class PlayerController : MonoBehaviour
         pos.y += Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
         transform.position = pos;
-        //for(int i = 0; i < spawner.carAmount; i++)
-        //{
-        //    spawner.cars.
-        //}
+        for (int i = 0; i < spawner.carAmount; i++)
+        {
+            float distance = Vector3.Distance(spawner.cars[i].transform.position, transform.position);
+            if(distance <= 1)
+            {
+                Victory();
+            }
+        }
         if (transform.position.y >= 4)
         {
             Victory();

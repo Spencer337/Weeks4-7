@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    Slider slider;
-    float t;
+    public Slider slider;
+    public float t = 60;
     void Start()
     {
         slider = GetComponent<Slider>();
@@ -15,7 +15,11 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t += Time.deltaTime;
-        slider.value = t % slider.maxValue;
+        // If the slider value is greater than zero, decrease the slider value by time
+        if (slider.value > 0)
+        {
+            t -= Time.deltaTime;
+            slider.value = t;
+        }
     }
 }
